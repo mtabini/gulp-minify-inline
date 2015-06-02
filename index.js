@@ -64,7 +64,7 @@ module.exports = function ( opt )
 			}
 		});
 
-		if (!has_done_nothing) file.contents = new Buffer($.html());
+		if (!has_done_nothing) file.contents = new Buffer($.html({ xmlMode : true }));
 
 		callback(null, file);
 	}
